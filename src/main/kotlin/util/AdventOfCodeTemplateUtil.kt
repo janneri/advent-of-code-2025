@@ -16,8 +16,8 @@ enum class InputType { GRID, TEXT, SECTIONS, LINES }
 
 object AdventOfCodeTemplateUtil {
     private const val YEAR = 2025
-    private const val DAYNUM = 2
-    private val inputType = InputType.TEXT
+    private const val DAYNUM = 3
+    private val inputType = InputType.LINES
     private const val SRC_DIR = "src/main/kotlin" // DayN.kt is created to this directory
     private const val TEST_DIR = "src/test/kotlin" // DayNTest.kt is created to this directory
     private val testResourcesDir = Path.of("src", "test", "kotlin", "resources") // Input is downloaded here

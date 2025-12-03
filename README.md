@@ -4,7 +4,7 @@
 |----------------------------------------------------------------|---------------------------------------------|------|-------------------------------------|
 | [Day 1 - Secret Entrance](https://adventofcode.com/2025/day/1) | [Day 1 solution](src/main/kotlin/Day01.kt)  | 26   | Modular arithmetic, circular buffer |
 | [Day 2 - Gift Shop](https://adventofcode.com/2025/day/2)       | [Day 2 solution](src/main/kotlin/Day02.kt)  | 27   | String patterns, repetition         |
-| [Day 3 - TODO](https://adventofcode.com/2025/day/3)            | [Day 3 solution](src/main/kotlin/Day03.kt)  | TODO | TODO                                |
+| [Day 3 - Lobby](https://adventofcode.com/2025/day/3)           | [Day 3 solution](src/main/kotlin/Day03.kt)  | 14   | Greedy algorithms, recursion        |
 | [Day 4 - TODO](https://adventofcode.com/2025/day/4)            | [Day 4 solution](src/main/kotlin/Day04.kt)  | TODO | TODO                                |
 | [Day 5 - TODO](https://adventofcode.com/2025/day/5)            | [Day 5 solution](src/main/kotlin/Day05.kt)  | TODO | TODO                                |
 | [Day 6 - TODO](https://adventofcode.com/2025/day/6)            | [Day 6 solution](src/main/kotlin/Day06.kt)  | TODO | TODO                                |
