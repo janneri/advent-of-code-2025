@@ -30,9 +30,14 @@ fun parseUlongs(str: String): List<ULong> =
 fun parseLongs(str: String): List<Long> =
     numPattern.findAll(str).map { it.value.toLong() }.toList()
 
-fun IntRange.intersectRange(other: IntRange) = (maxOf(first, other.first)..minOf(last, other.last))
+fun IntRange.intersectRange(other: IntRange) =
+    (maxOf(first, other.first)..minOf(last, other.last))
 
-fun LongRange.intersectRange(other: LongRange) = (maxOf(first, other.first)..minOf(last, other.last))
+fun LongRange.intersectRange(other: LongRange) =
+    (maxOf(first, other.first)..minOf(last, other.last))
+
+fun LongRange.mergeRange(other: LongRange) =
+    (minOf(first, other.first)..maxOf(last, other.last))
 
 fun Double.almostEqual(other: Double) = abs(this - other) < 0.0001
 
