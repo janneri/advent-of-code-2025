@@ -2,20 +2,20 @@
 
 ## Calendar of puzzles
 
-| Puzzle                                                             | Solution                                    | LOC  | Themes                              |
-|--------------------------------------------------------------------|---------------------------------------------|------|-------------------------------------|
-| [Day 1 - Secret Entrance](https://adventofcode.com/2025/day/1)     | [Day 1 solution](src/main/kotlin/Day01.kt)  | 26   | Modular arithmetic, circular buffer |
-| [Day 2 - Gift Shop](https://adventofcode.com/2025/day/2)           | [Day 2 solution](src/main/kotlin/Day02.kt)  | 27   | String patterns, repetition         |
-| [Day 3 - Lobby](https://adventofcode.com/2025/day/3)               | [Day 3 solution](src/main/kotlin/Day03.kt)  | 14   | Greedy algorithms, recursion        |
-| [Day 4 - Printing Department](https://adventofcode.com/2025/day/4) | [Day 4 solution](src/main/kotlin/Day04.kt)  | 32   | Grid, coords, simulation            |
-| [Day 5 - TODO](https://adventofcode.com/2025/day/5)                | [Day 5 solution](src/main/kotlin/Day05.kt)  | TODO | TODO                                |
-| [Day 6 - TODO](https://adventofcode.com/2025/day/6)                | [Day 6 solution](src/main/kotlin/Day06.kt)  | TODO | TODO                                |
-| [Day 7 - TODO](https://adventofcode.com/2025/day/7)                | [Day 7 solution](src/main/kotlin/Day07.kt)  | TODO | TODO                                |
-| [Day 8 - TODO](https://adventofcode.com/2025/day/8)                | [Day 8 solution](src/main/kotlin/Day08.kt)  | TODO | TODO                                |
-| [Day 9 - TODO](https://adventofcode.com/2025/day/9)                | [Day 9 solution](src/main/kotlin/Day09.kt)  | TODO | TODO                                |
-| [Day 10 - TODO](https://adventofcode.com/2025/day/10)              | [Day 10 solution](src/main/kotlin/Day10.kt) | TODO | TODO                                |
-| [Day 11 - TODO](https://adventofcode.com/2025/day/11)              | [Day 11 solution](src/main/kotlin/Day11.kt) | TODO | TODO                                |
-| [Day 12 - TODO](https://adventofcode.com/2025/day/12)              | [Day 12 solution](src/main/kotlin/Day12.kt) | TODO | TODO                                |
+| Puzzle                                                             | Solution                                    | LOC  | Themes                                             |
+|--------------------------------------------------------------------|---------------------------------------------|------|----------------------------------------------------|
+| [Day 1 - Secret Entrance](https://adventofcode.com/2025/day/1)     | [Day 1 solution](src/main/kotlin/Day01.kt)  | 26   | Modular arithmetic, circular buffer                |
+| [Day 2 - Gift Shop](https://adventofcode.com/2025/day/2)           | [Day 2 solution](src/main/kotlin/Day02.kt)  | 27   | String patterns, repetition                        |
+| [Day 3 - Lobby](https://adventofcode.com/2025/day/3)               | [Day 3 solution](src/main/kotlin/Day03.kt)  | 14   | Greedy algorithms, recursion                       |
+| [Day 4 - Printing Department](https://adventofcode.com/2025/day/4) | [Day 4 solution](src/main/kotlin/Day04.kt)  | 32   | Grid, coords, simulation                           |
+| [Day 5 - Cafeteria](https://adventofcode.com/2025/day/5)           | [Day 5 solution](src/main/kotlin/Day05.kt)  | 25   | Range merging, interval processing, set operations |
+| [Day 6 - TODO](https://adventofcode.com/2025/day/6)                | [Day 6 solution](src/main/kotlin/Day06.kt)  | TODO | TODO                                               |
+| [Day 7 - TODO](https://adventofcode.com/2025/day/7)                | [Day 7 solution](src/main/kotlin/Day07.kt)  | TODO | TODO                                               |
+| [Day 8 - TODO](https://adventofcode.com/2025/day/8)                | [Day 8 solution](src/main/kotlin/Day08.kt)  | TODO | TODO                                               |
+| [Day 9 - TODO](https://adventofcode.com/2025/day/9)                | [Day 9 solution](src/main/kotlin/Day09.kt)  | TODO | TODO                                               |
+| [Day 10 - TODO](https://adventofcode.com/2025/day/10)              | [Day 10 solution](src/main/kotlin/Day10.kt) | TODO | TODO                                               |
+| [Day 11 - TODO](https://adventofcode.com/2025/day/11)              | [Day 11 solution](src/main/kotlin/Day11.kt) | TODO | TODO                                               |
+| [Day 12 - TODO](https://adventofcode.com/2025/day/12)              | [Day 12 solution](src/main/kotlin/Day12.kt) | TODO | TODO                                               |
 
 ## Blog
 
@@ -110,3 +110,29 @@ fun part2(): Int {
     return removed.size
 }
 ```
+
+
+### buildList
+
+The day 5 puzzle required merging a list of ranges. 
+You can use Kotlin's `buildList` for that:
+
+```kotlin
+buildList {
+    ranges.forEach { range ->
+        val last = lastOrNull()
+        when {
+            last == null -> add(range)
+            range.overLaps(last) -> {
+                removeLast()
+                add(last.mergeRange(range))
+            }
+            else -> add(range)
+        }
+    }
+}
+```
+
+Why would you use `buildList` instead of fold?
+The `fold` is well known and a general-purpose function for accumulating results.
+The intent of building a list is clearer with `buildList`, enhancing code readability.
