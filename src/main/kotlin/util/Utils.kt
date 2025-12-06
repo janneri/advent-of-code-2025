@@ -343,3 +343,10 @@ fun <T> List<T>.combinations(): List<Pair<T, T>> =
             item1 to item2
         }
     }
+
+fun <T> List<List<T>>.transpose(): List<List<T>> {
+    val colCount = this[0].size
+    return (0 until colCount).map { colIndex ->
+        this.map { row -> row[colIndex] }
+    }
+}
