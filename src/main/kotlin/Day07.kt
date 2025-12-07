@@ -1,9 +1,7 @@
-import util.Coord
 import util.Direction
 import util.Direction.LEFT
 import util.Direction.RIGHT
 import util.Grid
-import util.drawGrid
 
 // See puzzle in https://adventofcode.com/2025/day/7
 
