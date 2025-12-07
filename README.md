@@ -10,7 +10,7 @@
 | [Day 4 - Printing Department](https://adventofcode.com/2025/day/4) | [Day 4 solution](src/main/kotlin/Day04.kt)  | 25   | Grid, coords, simulation                           |
 | [Day 5 - Cafeteria](https://adventofcode.com/2025/day/5)           | [Day 5 solution](src/main/kotlin/Day05.kt)  | 25   | Range merging, interval processing, set operations |
 | [Day 6 - Trash Compactor](https://adventofcode.com/2025/day/6)     | [Day 6 solution](src/main/kotlin/Day06.kt)  | 40   | Column parsing, transpose, string manipulation     |
-| [Day 7 - TODO](https://adventofcode.com/2025/day/7)                | [Day 7 solution](src/main/kotlin/Day07.kt)  | TODO | TODO                                               |
+| [Day 7 - Laboratories](https://adventofcode.com/2025/day/7)        | [Day 7 solution](src/main/kotlin/Day07.kt)  | 43   | Beam simulation, timeline tracking                 |
 | [Day 8 - TODO](https://adventofcode.com/2025/day/8)                | [Day 8 solution](src/main/kotlin/Day08.kt)  | TODO | TODO                                               |
 | [Day 9 - TODO](https://adventofcode.com/2025/day/9)                | [Day 9 solution](src/main/kotlin/Day09.kt)  | TODO | TODO                                               |
 | [Day 10 - TODO](https://adventofcode.com/2025/day/10)              | [Day 10 solution](src/main/kotlin/Day10.kt) | TODO | TODO                                               |

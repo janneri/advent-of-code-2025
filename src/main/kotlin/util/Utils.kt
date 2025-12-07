@@ -228,6 +228,7 @@ data class Grid<T>(val width: Int,
     operator fun get(coord: Coord): T? = tileMap[coord]
     operator fun contains(coord: Coord): Boolean = tileMap.containsKey(coord)
 
+    fun lastY(): Int = height - 1
     fun centerCoord() = Coord(width / 2, height / 2)
     fun coords(): Set<Coord> = tileMap.keys
     fun coordsWithout(coord: Coord): Set<Coord> = tileMap.keys.filter { it != coord }.toSet()
