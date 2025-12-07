@@ -29,7 +29,7 @@ If you come from Java, Python, or C++, you might expect `%` to always yield a no
 | `(-3).rem(100)`    | -3     | Equivalent to `%`                     |
 | `(-3).mod(100)`    | 97     | Always non-negative, wraps correctly  |
 
-For example, in Day 1, the puzzle involved a dial 0..99 that could be turned left or right and wraps around zero. Using `%` could lead to negative positions, which are invalid for the dial. Using `mod` ensures the position wraps correctly within 0..99.
+For example, in Day 1, the puzzle involved a dial `0..99` that could be turned left or right and wraps around zero. Using `%` could lead to negative positions, which are invalid for the dial. Using `mod` ensures the position wraps correctly within `0..99`.
 
 ```kotlin
 fun turnDial(start: Int, steps: Int): Int = (start + steps).mod(100)
@@ -53,7 +53,7 @@ val dialPositions =
 println(dialPositions) // Output: [5, 15, 5, 25]
 ```
 
-Here, `runningFold` starts at 5 and applies each move, collecting all intermediate positions.
+Here, `runningFold` starts at `5` and applies each move, collecting all intermediate positions.
 
 ### generateSequence and filterTo
 
@@ -154,4 +154,67 @@ println(columns) // Output: [[1], [2, 4], [3, 5, 6], [], [1, 1, 9], [2, 8]]
 - `getOrNull` prevents exceptions from out-of-bounds access.
 - `takeIf` is used to skip spaces.
 
-For more on these functions, see the [Kotlin Standard Library documentation](https://kotlinlang.org/api/latest/jvm/stdlib/).
+### Use operators for grid utils 
+
+Kotlin allows operator overloading. 
+For example, defining `plus` and `minus` operators for a `Coord` class can simplify neighbor calculations.
+
+```kotlin
+data class Coord(val x: Int, val y: Int) {
+    fun move(dir: Direction) = this + dir.delta
+    operator fun plus(other: Coord) = Coord(x + other.x, y + other.y)
+}
+
+enum class Direction(val delta: Coord) {
+    UP(Coord(0, -1)),
+    DOWN(Coord(0, 1)),
+    LEFT(Coord(-1, 0)),
+    RIGHT(Coord(1, 0))
+}
+
+// Example usage:
+val start = Coord(0, 3) // 'S' position
+val upNeighbor = start.move(Direction.DOWN) // Coord(1, 3))
+```
+
+Many puzzles in AOC involve moving around a grid. 
+Defining `get` and `contains` operators for a `Grid` class make grid access more intuitive.
+
+```kotlin 
+data class Grid<T>(val width: Int,
+                   val height: Int,
+                   val tileMap: Map<Coord, T>
+) {
+    operator fun get(coord: Coord): T? = tileMap[coord]
+    operator fun contains(coord: Coord): Boolean = tileMap.containsKey(coord)
+    
+    companion object {
+        fun of(lines: List<String>): Grid<Char> {
+            val tiles: Map<Coord, Char> = lines.flatMapIndexed { y, line ->
+                line.mapIndexed { x, char -> Coord(x, y) to char }
+            }.toMap()
+
+            return Grid(lines[0].length, lines.size, tiles)
+        }
+    }
+}
+
+// Example usage:
+val gridLines = """
+    ...S...
+    .......
+    ...^...
+    .......
+    ..^.^..
+    """.trimIndent().lines()
+
+val grid = Grid.of(gridLines)
+val startCoord = Coord(0, 3)
+println(grid[startCoord]) // 'S'
+println(startCoord in grid) // true
+```
+
+### Summary
+
+These are just the tips and idioms I've found useful while solving the Advent of Code 2025 puzzles in Kotlin.
+Happy coding!
