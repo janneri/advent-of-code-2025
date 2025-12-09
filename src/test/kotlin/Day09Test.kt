@@ -25,12 +25,6 @@ class Day09Test {
     }
 
     @Test
-    fun part2_test2() {
-        val result = Day09(readInput("Day09_test")).getRectangles(listOf(Coord(0, 0), Coord(0, 4), Coord(4, 4), Coord(4, 0)))
-        println(result)
-    }
-
-    @Test
     fun part2_real() {
         val result = Day09(readInput("Day09")).part2()
         assertEquals(1461987144, result)
