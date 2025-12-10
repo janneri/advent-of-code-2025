@@ -63,14 +63,14 @@ class Day10(inputLines: List<String>) {
 
 
     data class SMTSolver(
-        val context: KContext,
+        val ctx: KContext,
         val machine: Machine,
     ) {
-        val buttonVars = machine.buttons.indices.map { context.mkConst("btn$it", context.intSort) }
-        val joltageVars = machine.joltageRequirements.indices.map { context.mkConst("j$it", context.intSort) }
+        val buttonVars = machine.buttons.indices.map { ctx.mkConst("btn$it", ctx.intSort) }
+        val joltageVars = machine.joltageRequirements.indices.map { ctx.mkConst("j$it", ctx.intSort) }
 
-        fun solve(): Int = KZ3Solver(context).use { solver ->
-            with(context) {
+        fun solve(): Int = KZ3Solver(ctx).use { solver ->
+            with(ctx) {
                 // Button counts >= 0 to prevent solver from using negative presses
                 buttonVars.forEach { solver.assertAndTrack(it ge 0.expr) }
 
