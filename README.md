@@ -12,8 +12,8 @@
 | [Day 6 - Trash Compactor](https://adventofcode.com/2025/day/6)     | [Day 6 solution](src/main/kotlin/Day06.kt)  | 40   | Column parsing, transpose, string manipulation       |
 | [Day 7 - Laboratories](https://adventofcode.com/2025/day/7)        | [Day 7 solution](src/main/kotlin/Day07.kt)  | 43   | Beam simulation, timeline tracking                   |
 | [Day 8 - Playground](https://adventofcode.com/2025/day/8)          | [Day 8 solution](src/main/kotlin/Day08.kt)  | 74   | Union-Find, graph connectivity, distance sorting     |
-| [Day 9 - Movie Theater](https://adventofcode.com/2025/day/9)       | [Day 9 solution](src/main/kotlin/Day09.kt)  | 42   | Rectangle geometry, polygon containment, brute-force |
-| [Day 10 - TODO](https://adventofcode.com/2025/day/10)              | [Day 10 solution](src/main/kotlin/Day10.kt) | TODO | TODO                                                 |
+| [Day 9 - Movie Theater](https://adventofcode.com/2025/day/9)       | [Day 9 solution](src/main/kotlin/Day09.kt)  | 42   | Rectangle geometry, polygon containment              |
+| [Day 10 - Factory](https://adventofcode.com/2025/day/10)           | [Day 10 solution](src/main/kotlin/Day10.kt) | 73   | SMT solver, Z3, constraint satisfaction, bit masking |
 | [Day 11 - TODO](https://adventofcode.com/2025/day/11)              | [Day 11 solution](src/main/kotlin/Day11.kt) | TODO | TODO                                                 |
 | [Day 12 - TODO](https://adventofcode.com/2025/day/12)              | [Day 12 solution](src/main/kotlin/Day12.kt) | TODO | TODO                                                 |
 

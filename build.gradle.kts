@@ -9,8 +9,12 @@ repositories {
     mavenCentral()
 }
 
+val ksmtVersion = "0.6.4"
+
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("io.ksmt:ksmt-core:${ksmtVersion}")
+    implementation("io.ksmt:ksmt-z3:${ksmtVersion}")
 }
 
 tasks.test {
