@@ -67,19 +67,17 @@ class Day10(inputLines: List<String>) {
         val machine: Machine,
     ) {
         val buttonVars = machine.buttons.indices.map { ctx.mkConst("btn$it", ctx.intSort) }
-        val joltageVars = machine.joltageRequirements.indices.map { ctx.mkConst("j$it", ctx.intSort) }
 
         fun solve(): Int = KZ3Solver(ctx).use { solver ->
             with(ctx) {
                 // Button counts >= 0 to prevent solver from using negative presses
-                buttonVars.forEach { solver.assertAndTrack(it ge 0.expr) }
+                buttonVars.forEach { solver.assert(it ge 0.expr) }
 
-                // Joltage equations: sum of buttons affecting each joltage index
+                // Joltage equations: sum of buttons affecting each joltage index must equal requirement
                 machine.joltageRequirements.forEachIndexed { i, req ->
                     val sum = buttonVars.filterIndexed { bi, _ -> i in machine.buttons[bi].joltageEffect }
                         .fold(0.expr as KExpr<KIntSort>) { acc, v -> acc + v }
-                    solver.assertAndTrack(joltageVars[i] eq sum)
-                    solver.assertAndTrack(joltageVars[i] eq req.expr)
+                    solver.assert(sum eq req.expr)
                 }
 
                 // Find minimum total button presses
