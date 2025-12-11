@@ -14,7 +14,7 @@
 | [Day 8 - Playground](https://adventofcode.com/2025/day/8)          | [Day 8 solution](src/main/kotlin/Day08.kt)  | 74   | Union-Find, graph connectivity, distance sorting     |
 | [Day 9 - Movie Theater](https://adventofcode.com/2025/day/9)       | [Day 9 solution](src/main/kotlin/Day09.kt)  | 42   | Rectangle geometry, polygon containment              |
 | [Day 10 - Factory](https://adventofcode.com/2025/day/10)           | [Day 10 solution](src/main/kotlin/Day10.kt) | 71   | SMT solver, Z3, constraint satisfaction, bit masking |
-| [Day 11 - TODO](https://adventofcode.com/2025/day/11)              | [Day 11 solution](src/main/kotlin/Day11.kt) | TODO | TODO                                                 |
+| [Day 11 - Reactor](https://adventofcode.com/2025/day/11)           | [Day 11 solution](src/main/kotlin/Day11.kt) | 41   | Graph traversal, DFS, memoization, path counting     |
 | [Day 12 - TODO](https://adventofcode.com/2025/day/12)              | [Day 12 solution](src/main/kotlin/Day12.kt) | TODO | TODO                                                 |
 
 ## Blog
