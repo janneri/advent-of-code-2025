@@ -2,20 +2,20 @@
 
 ## Calendar of puzzles
 
-| Puzzle                                                             | Solution                                    | SLOC | Themes                                               |
-|--------------------------------------------------------------------|---------------------------------------------|------|------------------------------------------------------|
-| [Day 1 - Secret Entrance](https://adventofcode.com/2025/day/1)     | [Day 1 solution](src/main/kotlin/Day01.kt)  | 19   | Modular arithmetic, circular buffer                  |
-| [Day 2 - Gift Shop](https://adventofcode.com/2025/day/2)           | [Day 2 solution](src/main/kotlin/Day02.kt)  | 18   | String patterns, repetition                          |
-| [Day 3 - Lobby](https://adventofcode.com/2025/day/3)               | [Day 3 solution](src/main/kotlin/Day03.kt)  | 10   | Greedy algorithms, recursion                         |
-| [Day 4 - Printing Department](https://adventofcode.com/2025/day/4) | [Day 4 solution](src/main/kotlin/Day04.kt)  | 25   | Grid, coords, simulation                             |
-| [Day 5 - Cafeteria](https://adventofcode.com/2025/day/5)           | [Day 5 solution](src/main/kotlin/Day05.kt)  | 25   | Range merging, interval processing, set operations   |
-| [Day 6 - Trash Compactor](https://adventofcode.com/2025/day/6)     | [Day 6 solution](src/main/kotlin/Day06.kt)  | 40   | Column parsing, transpose, string manipulation       |
-| [Day 7 - Laboratories](https://adventofcode.com/2025/day/7)        | [Day 7 solution](src/main/kotlin/Day07.kt)  | 43   | Beam simulation, timeline tracking                   |
-| [Day 8 - Playground](https://adventofcode.com/2025/day/8)          | [Day 8 solution](src/main/kotlin/Day08.kt)  | 74   | Union-Find, graph connectivity, distance sorting     |
-| [Day 9 - Movie Theater](https://adventofcode.com/2025/day/9)       | [Day 9 solution](src/main/kotlin/Day09.kt)  | 42   | Rectangle geometry, polygon containment              |
-| [Day 10 - Factory](https://adventofcode.com/2025/day/10)           | [Day 10 solution](src/main/kotlin/Day10.kt) | 71   | SMT solver, Z3, constraint satisfaction, bit masking |
-| [Day 11 - Reactor](https://adventofcode.com/2025/day/11)           | [Day 11 solution](src/main/kotlin/Day11.kt) | 41   | Graph traversal, DFS, memoization, path counting     |
-| [Day 12 - TODO](https://adventofcode.com/2025/day/12)              | [Day 12 solution](src/main/kotlin/Day12.kt) | TODO | TODO                                                 |
+| Puzzle                                                               | Solution                                    | SLOC | Themes                                               |
+|----------------------------------------------------------------------|---------------------------------------------|------|------------------------------------------------------|
+| [Day 1 - Secret Entrance](https://adventofcode.com/2025/day/1)       | [Day 1 solution](src/main/kotlin/Day01.kt)  | 19   | Modular arithmetic, circular buffer                  |
+| [Day 2 - Gift Shop](https://adventofcode.com/2025/day/2)             | [Day 2 solution](src/main/kotlin/Day02.kt)  | 18   | String patterns, repetition                          |
+| [Day 3 - Lobby](https://adventofcode.com/2025/day/3)                 | [Day 3 solution](src/main/kotlin/Day03.kt)  | 10   | Greedy algorithms, recursion                         |
+| [Day 4 - Printing Department](https://adventofcode.com/2025/day/4)   | [Day 4 solution](src/main/kotlin/Day04.kt)  | 25   | Grid, coords, simulation                             |
+| [Day 5 - Cafeteria](https://adventofcode.com/2025/day/5)             | [Day 5 solution](src/main/kotlin/Day05.kt)  | 25   | Range merging, interval processing, set operations   |
+| [Day 6 - Trash Compactor](https://adventofcode.com/2025/day/6)       | [Day 6 solution](src/main/kotlin/Day06.kt)  | 40   | Column parsing, transpose, string manipulation       |
+| [Day 7 - Laboratories](https://adventofcode.com/2025/day/7)          | [Day 7 solution](src/main/kotlin/Day07.kt)  | 43   | Beam simulation, timeline tracking                   |
+| [Day 8 - Playground](https://adventofcode.com/2025/day/8)            | [Day 8 solution](src/main/kotlin/Day08.kt)  | 74   | Union-Find, graph connectivity, distance sorting     |
+| [Day 9 - Movie Theater](https://adventofcode.com/2025/day/9)         | [Day 9 solution](src/main/kotlin/Day09.kt)  | 42   | Rectangle geometry, polygon containment              |
+| [Day 10 - Factory](https://adventofcode.com/2025/day/10)             | [Day 10 solution](src/main/kotlin/Day10.kt) | 71   | SMT solver, Z3, constraint satisfaction, bit masking |
+| [Day 11 - Reactor](https://adventofcode.com/2025/day/11)             | [Day 11 solution](src/main/kotlin/Day11.kt) | 41   | Graph traversal, DFS, memoization, path counting     |
+| [Day 12 - Christmas Tree Farm](https://adventofcode.com/2025/day/12) | [Day 12 solution](src/main/kotlin/Day12.kt) | 80   | Shape packing, grid search, backtracking             |
 
 ## Blog
 
